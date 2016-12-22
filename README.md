@@ -1,2 +1,2 @@
-# sharedbase
-Shared Node modules for all services
+# node-react-base
+React base for node apps
