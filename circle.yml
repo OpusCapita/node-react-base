@@ -7,7 +7,7 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build --rm=false -t ocbesbn/node-react-base:latest .
+    - docker build --rm=false -t gr4per/node-react-base:latest .
 
 test:
   override:
@@ -21,4 +21,4 @@ deployment:
     branch: master
     commands:
       - docker login -u $DOCKER_USER -p $DOCKER_PASS -e $DOCKER_EMAIL
-      - docker push ocbesbn/node-react-base
+      - docker push gr4per/node-react-base
