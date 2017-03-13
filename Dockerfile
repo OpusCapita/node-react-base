@@ -11,10 +11,8 @@ RUN mkdir -p ${modulesPath}
 WORKDIR /var/tmp/base/
 
 COPY package.json .
-RUN chown -Rf node:node ${modulesPath}
 
 # Setting NODE_ENV is necessary for "npm install" below.
 ENV NODE_ENV=development
-RUN npm set progress=false && npm install
-
+RUN yarn
 RUN chown -Rf node:node ${modulesPath}
