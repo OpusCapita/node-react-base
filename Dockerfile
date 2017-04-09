@@ -14,5 +14,5 @@ COPY package.json .
 
 # Setting NODE_ENV is necessary for "npm install" below.
 ENV NODE_ENV=development
-RUN yarn
+RUN npm set progress=false && npm install && npm cache clean
 RUN chown -Rf node:node ${modulesPath}
