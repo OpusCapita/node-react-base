@@ -11,6 +11,7 @@ RUN mkdir -p ${modulesPath}
 WORKDIR /var/tmp/base/
 
 COPY package.json .
+COPY yarn.lock .
 
 # Setting NODE_ENV is necessary for "npm install" below.
 ENV NODE_ENV=development
